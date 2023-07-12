@@ -1,2 +1,20 @@
 # preventSubmit.html 
- Prevent Form Submission
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prevent Form Submission</title>
+    <script type="text/javascript">
+        function preventFormSubmit(event) {
+            event.preventDefault();
+        }
+        
+        window.onload = function() {
+            var form = document.getElementById('your-form-id');
+            form.addEventListener('submit', preventFormSubmit);
+        };
+    </script>
+</head>
+<body>
+    <p>This page is used to prevent the form submission.</p>
+</body>
+</html>
